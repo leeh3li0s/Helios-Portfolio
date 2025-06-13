@@ -337,3 +337,102 @@ body {
     color: rgb(224, 18, 18);
     transition: color 0.3s ease;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        top: 20px;
+        right: 20px;
+        gap: 20px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+    #logo {
+        font-size: 24px;
+        top: 20px;
+        left: 20px;
+    }
+
+    .ndiv1 p,
+    .ndiv2 p {
+        font-size: 6vh;
+    }
+
+    .text-overlay h1, .text-overlay a {
+        font-size: 40px;
+    }
+
+    #topText,
+    #bottomText {
+        font-size: 14px;
+    }
+
+    .socMedIcons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .d3n2_Header h2 {
+        font-size: 40px;
+        margin-top: 100px;
+    }
+
+    .rowDiv {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        font-size: 24px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 30% auto;
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .close-modal {
+        font-size: 30px;
+        top: 10px;
+        right: 15px;
+    }
+
+    /* Adjust div heights for mobile */
+    .div1, .div2 {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .d2NestedDiv1, .d2NestedDiv2 {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .d3n2_Header {
+        height: auto;
+    }
+
+    #d2nd1IMG {
+        height: 100%;
+    }
+}
+
+/* Even smaller screens (phones) */
+@media (max-width: 480px) {
+    .text-overlay h1, .text-overlay a {
+        font-size: 28px;
+    }
+
+    .rowDiv {
+        font-size: 20px;
+    }
+
+    .d3n2_Header h2 {
+        font-size: 28px;
+    }
+}
