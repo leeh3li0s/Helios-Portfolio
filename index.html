@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helios</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="nav">
+        <a href="#div1" id = "logo">Helios</a>
+    <div class="navbar">
+        <a href="#div3" class="menu">Projects</a>
+        <a href="#div2" class="menu">Profile</a>
+        <a href="#" class="menu">Contact Me</a>
+    </div>
+    </div>
+
+    <div id="menuToggle" class="hamburger">&#9776;</div>
+    
+    <div id = "sideBarBackground">
+        <div id="sidebarMenu" class="sidebar">
+            <a href="#div3" class="menu">Projects</a>
+            <a href="#div2" class="menu">Profile</a>
+            <a href="#" class="menu">Contact Me</a>
+        </div>
+    </div>
+
+
+    
+    <div class = "div1" id = "div1">
+
+        <div class="ndiv1">
+            <p>portfolio.</p>
+        </div>
+
+        <div class="ndiv2">
+            <p>(2025)*</p>
+        </div>
+        
+    </div>
+
+    <!-- div 1 ends here -->
+
+
+    <div class="div2" id = "div2">
+        <!-- d2 Nested Div 1 contains: background of profile info
+        profile info text, and social media icons and links
+        -->
+        <div class = "d2NestedDiv1">
+            <img id = "d2nd1IMG"src="https://ik.imagekit.io/heli0s/profileInfoBackground.png?updatedAt=1749805416139" alt="">
+            <div class="text-overlay">
+                <p id = "topText">HELLO, I AM</p>
+                <a href="" id="HELIOS"><h1>HELIOS</h1></a>
+                <p id = "bottomText">multimedia artist and programmer.</p>
+
+                
+            </div>
+
+            <div class = "socMedIcons">
+                <a href="https://facebook.com/111lios" target="_blank">
+                    <img src="https://ik.imagekit.io/heli0s/facebook.png?updatedAt=1749805412001">
+                </a>
+                
+                <a href="https://www.linkedin.com/in/ana-marie-lim-466320285/" target="_blank">
+                    <img src="https://ik.imagekit.io/heli0s/linkedin.png?updatedAt=1749805413467" alt="">
+                </a>
+                
+                <a href="mailto:anamarielimm@gmail.com?subject=Website Portfolio Inquiry&body=Hi! I have seen your portfolio." target="_blank">
+                    <img src="https://ik.imagekit.io/heli0s/email.png?updatedAt=1749805411950" alt="">
+                </a>
+            </div>
+            
+
+        </div>
+        <!-- nested div separators -->
+
+        <div class = "d2NestedDiv2">
+            <img id = "d2img2" src="https://ik.imagekit.io/heli0s/picture.JPG?updatedAt=1749805413878" alt="">
+
+            
+        </div>
+        <!-- nested div 2 ends here -->
+
+    </div>
+
+    <!-- div 2 ends here -->
+
+    <div class = "div3" id = "div3">
+        <div class="d3n1">
+            <img id = "div3img1" src="https://ik.imagekit.io/heli0s/h2.png?updatedAt=1749805413659" alt="">
+        </div>
+
+        <div class="d3n2">
+            
+            <div class = "d3n2_Header">
+            <h2>Projects</h2>
+            </div>
+
+            <div class = rowDivContainer>
+                <!-- <a href="projATM.html" class="rowDiv scramble-text" id="divATM">ATM</a>
+                <a href="projAPM.html" class="rowDiv scramble-text" id="divQMS">APM</a>
+                <a href="#" class="rowDiv scramble-text" id="rowDiv3">QMS</a>
+                <a href="#" class="rowDiv scramble-text" id="divGDesign">Design</a> -->
+
+                <a href="projATM.html" id="divATM">
+                    <div class = "rows" id = "ATM">
+                        <p class = "arrow">&#x2197;</p>
+                        <h3 class = "scramble-text" id = "h3ATM">Nexus ATM </h3>
+                        <p class = "desc">A first year Java Project in compliance to
+                            a core subject ‘Fundamentals to Program-
+                            ming. Designed with a minimalistic yet
+                            bold approach.</p>
+                    </div>
+                </a>
+
+
+                <a href="projAPM.html" id="divQMS">
+                    <div class = "rows" id = "APM">
+                        <p class = "arrow">&#x2197;</p>
+                        <h3 class = "scramble-text">Android Password Manager</h3>
+                        <p class = "desc">A first year Java Project in compliance to a core subject ‘Fundamentals to Programming. Designed with a minimalistic yetbold approach.</p>
+                    </div>
+                </a>
+                
+                <a href="projQMS.html" class="" id="rowDiv3">
+                    <div class = "rows" id = "APM">
+                        <p class = "arrow">&#x2197;</p>
+                        <h3 class = "scramble-text">Queueing Management System</h3>
+                        <p class = "desc">A 2nd year Java Project in compliance to
+                            a core subject ‘Data Structures and 
+                            Algorithm’ compiled using Apache-
+                            Netbeans. Approaches a friendly user
+                            interface design.</p>
+                    </div>
+                </a>
+                <a href="#" class= id="divGDesign"><div class = "rows" id = "APM">
+                        <p class = "arrow">&#x2197;</p>
+                        <h3 class = "scramble-text">Design</h3>
+                        <p class = "desc">A compilation of the entirety of my graphic designs which includes poster designs, projects, and logo designs.</p>
+                    </div></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class = "div4" id = "div4">
+        <div class = "div4-contact">
+            <h2>get in touch.</h2>
+
+            <div class = "formContainer"></div>
+            <form class="contact-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+            <label for="inquiry">Inquiry</label>
+            <textarea id="inquiry" name="inquiry" rows="5" placeholder="Write your message..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </div>
+        
+        </div>
+    
+
+<!-- Modal Popup -->
+<div id="Modal" class="popUpBox">
+    <div class="modal-content">
+        <span class="close-modal"> &times; </span>
+        <h1>Hello!</h1>
+        <p>I am Ana Marie Lim, a 19 year old BSIT-MWA 2nd year student at National University Mall of Asia. This portfolio project is a requirement for completion of our core subject Web Systems and Technologies. 
+            
+        <br><br>
+        
+        Within this portfolio you can expect to see my past programming projects/systems that I have made during my stay here at NU MOA as an IT student, as well as my design portfolio.</p>
+    </div>
+</div>
+
+<script>
+    // here is where u initializing and get modal elements
+    const Link = document.querySelector('#HELIOS');
+    const modal = document.getElementById('Modal');
+    const closeBtn = document.querySelector('.close-modal');
+
+    // this is when the icon is clicked
+    Link.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent default link behavior
+        modal.style.display = 'block';
+    });
+
+    // and when the close button is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // when u click anywhere outside modal
+    window.addEventListener('click', function(e) {
+        if (e.target == modal) {
+            modal.style.display = 'none';
+        }
+
+        // Sidebar toggle
+const menuToggle = document.getElementById('menuToggle');
+const sidebarMenu = document.getElementById('sidebarMenu');
+
+menuToggle.addEventListener('click', () => {
+    sidebarMenu.classList.toggle('active');
+});
+
+    });
+
+    const scrambleCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+-=[]{}";
+
+document.querySelectorAll(".scramble-text").forEach(el => {
+    const original = el.textContent;
+    el.dataset.value = original;
+
+    el.addEventListener("mouseover", () => {
+        let iteration = 0;
+        const originalText = el.dataset.value;
+        el.classList.add("animating");
+
+        const interval = setInterval(() => {
+            const scrambled = originalText
+                .split("")
+                .map((char, index) => {
+                    if (index < iteration) return originalText[index];
+                    if (char === " ") return " ";
+                    return scrambleCharacters[Math.floor(Math.random() * scrambleCharacters.length)];
+                })
+                .join("");
+
+            el.textContent = scrambled;
+
+            if (iteration >= originalText.length) {
+                clearInterval(interval);
+                el.textContent = originalText;
+                el.classList.remove("animating");
+            }
+
+            iteration += 1 / 2;
+        }, 30);
+    });
+});
+
+// functional contact page
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.contact-form');
+
+    form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const inquiry = document.getElementById('inquiry').value.trim();
+
+    if (!name || !email || !inquiry) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    // Compose mailto link
+    const subject = encodeURIComponent("Portfolio Inquiry");
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage:\n${inquiry}`);
+    const mailto = `mailto:anamarielimm@email.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailto;
+    });
+});
+
+
+
+
+</script>
+</body>
+</html>
