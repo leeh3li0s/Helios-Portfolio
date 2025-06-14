@@ -8,7 +8,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(162, 162, 94);
+    background-color: rgb(0, 0, 0);
     scroll-behavior:smooth;
 
 }
@@ -100,6 +100,8 @@ body {
     transition: color 0.3s ease;
 
 }
+
+
 /*
 .menu {
     position: fixed;
@@ -116,6 +118,7 @@ body {
     transition: color 0.3s ease;
 
 }
+
 .div2 {
     display: flex;              /* Use flexbox for equal distribution */
     width: 100vw;               /* Full viewport width */
@@ -227,26 +230,42 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 
-    gap: 40px;
+    
+    gap: 20px;
 
 
 }
 
+.rowDivContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px; /* Controls spacing between both columns and rows */
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    /* Remove fixed height to avoid scroll */
+    height: auto;
+    overflow: visible;
+}
+
+.rowDivContainer a {
+    text-decoration: none;
+}
 
 .rowDiv {
     color: black;
     backdrop-filter: blur(100px);
-    width: 80%;
-    height: 25%;
+    width: 95%;
+    height: 95%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: large;
 
     cursor: pointer;
 
@@ -254,18 +273,13 @@ body {
     border: #939393 solid 1.5px;
 
     font-size: 40px;
-    font-weight:800;
     color: #ffffff;
 
 }
 
-#rowDiv3 {
-    margin-bottom: 4%;
-}
-
 .d3n2_Header {
     width: 100%;
-    height: 20%;
+    height: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,19 +290,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 80px;
-    margin-top: 190px;
+    font-size: 50px;
+    margin-top: 100px;
 }
 
-.rowDiv:hover {
+.rows:hover {
     background-color: white;
     color: black;
     mix-blend-mode: difference;
     backdrop-filter: blur(100px);
     transition: 1.5s ease;
 }
-
-
 
 
 /* Modal Styles */
@@ -316,6 +328,7 @@ body {
     color: white;
     font-size: 24px;
     position: relative;
+
 }
 
 .modal-content h1 {
@@ -338,37 +351,255 @@ body {
     transition: color 0.3s ease;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-    .navbar {
+/* Sidebar menu styling */
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 200px;
+    background-color: #111;
+    z-index: 1002;
+    padding-top: 60px;
+    transition: 0.3s;
+    flex-direction: column;
+    border-top-left-radius: 60px;
+}
+
+.sidebar a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #444;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1003;
+    cursor: pointer;
+}
+
+
+
+.rows {
+    padding: 30px;
+    min-height: 350px;
+    min-width: 350px;
+    border: solid 1px white;
+    border-radius: 25px;
+    background-color: #00000034;
+    backdrop-filter: blur(70px);
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    box-sizing: border-box;
+}
+
+
+.arrow {
+    font-size: 40px;
+    font-weight: 0;
+
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    margin: 0;
+}
+
+.arrow:hover {
+    color: black;
+}
+
+#desc {
+    font-size: 20px;
+    font-weight: 0;
+}
+
+.rows h3 {
+    font-size: 48px;
+    line-height:90%;
+
+    
+    position: absolute;
+    bottom: 110px;
+
+}
+
+.scramble-text:hover {
+    color: black;
+}
+
+.div4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div4-contact {
+    width: 60%;
+    height: 60%;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: white solid 1px;
+    position: relative;
+    }
+
+    .div4-contact h2 {
+    font-size: 36px;
+    }
+
+    .contact-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    }
+
+    .contact-form label {
+    font-size: 14px;
+    color: #ccc;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+    color: #777;
+    }
+
+    .contact-form button {
+    padding: 12px 15px;
+    background-color: #e5e5e5;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+    background-color: #ccc;
+    }
+
+
+/* Mobile and Smaller Screen Responsiveness code */
+
+    @media (max-width: 768px) {
+        .div1,
+        .div2,
+        .div3 {
+            flex-direction: column;
+            height: auto;
+            min-height: 100vh;
+        }
+
+    .div1 {
+        background-size:inherit;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        background-color: #010101;
+    }
+
+
+
+    .d3n1, .d3n2 {
         flex-direction: column;
-        top: 20px;
-        right: 20px;
-        gap: 20px;
     }
 
-    .navbar a {
-        font-size: 18px;
+
+    .ndiv1 p, .ndiv2 p {
+        font-size: 7vh;
+        mix-blend-mode: difference;
     }
 
-    #logo {
-        font-size: 24px;
-        top: 20px;
-        left: 20px;
+    .ndiv2 {
+
     }
 
-    .ndiv1 p,
     .ndiv2 p {
-        font-size: 6vh;
+    }
+
+    .d2NestedDiv1, .d2NestedDiv2 {
+        flex: none;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .d2NestedDiv2 img#d2img2 {
+        max-width: 90%;
+        max-height: 60%;
+    }
+
+    .d2NestedDiv2 {
+        background: #202020;
+    background: -moz-linear-gradient(top, #202020 0%, #000000 100%);
+    background: -webkit-linear-gradient(top, #202020 0%, #000000 100%);
+    background: linear-gradient(to bottom, #202020 0%, #000000 100%);
     }
 
     .text-overlay h1, .text-overlay a {
-        font-size: 40px;
+        font-size: 50px;
     }
 
-    #topText,
-    #bottomText {
-        font-size: 14px;
+    .text-overlay p,
+    .text-overlay #topText,
+    .text-overlay #bottomText {
+        font-size: 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        right: 10px;
+        top: 10px;
+    }
+
+    #logo {
+        font-size: 25px;
+        top: 28px;
+        left: 20px;
     }
 
     .socMedIcons img {
@@ -376,63 +607,92 @@ body {
         height: 30px;
     }
 
-    .d3n2_Header h2 {
-        font-size: 40px;
-        margin-top: 100px;
-    }
-
     .rowDiv {
-        width: 90%;
-        height: auto;
-        padding: 20px;
+        width: 50%;
+        height: 30%;
         font-size: 24px;
+        padding: 50px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
     }
 
-    .modal-content {
-        width: 90%;
-        margin: 30% auto;
-        padding: 20px;
-        font-size: 18px;
-    }
-
-    .close-modal {
-        font-size: 30px;
-        top: 10px;
-        right: 15px;
-    }
-
-    /* Adjust div heights for mobile */
-    .div1, .div2 {
-        flex-direction: column;
-        height: auto;
-        min-height: 100vh;
-    }
-
-    .d2NestedDiv1, .d2NestedDiv2 {
+    .d3n2 {
         width: 100%;
-        height: 50vh;
+        height: 100%;
+        overflow: hidden;
     }
+
 
     .d3n2_Header {
-        height: auto;
-    }
-
-    #d2nd1IMG {
-        height: 100%;
-    }
-}
-
-/* Even smaller screens (phones) */
-@media (max-width: 480px) {
-    .text-overlay h1, .text-overlay a {
-        font-size: 28px;
-    }
-
-    .rowDiv {
-        font-size: 20px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .d3n2_Header h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        margin-top: 80px;
+    }
+
+
+    .modal-content {
+        width: 70%;
+        font-size: 18px;
+
+        top: 100px;
+
+    }
+
+        .close-modal {
+            font-size: 30px;
+            top: 10px;
+            right: 20px;
+        }
+
+    .socMedIcons {
+        bottom: 10%;
+        gap: 10px;
+    }
+
+    .rowDivContainer {
+        width: 90%;
+        height: 100%;
+        
+    }
+
+    /* Sidebar0 */
+
+    .navbar {
+            display: none; /* Hide top navbar */
+        }
+
+        .hamburger {
+            display: block; /* Show hamburger icon */
+        }
+
+        .sidebar {
+            display: flex; /* Show sidebar menu */
+        }
+
+
+    .div4-contact {
+        width: 80%;
+    }
+
+    .div4-contact h2 {
         font-size: 28px;
     }
-}
+
+    .contact-form {
+        width: 90%;
+    }
+    
+    }
